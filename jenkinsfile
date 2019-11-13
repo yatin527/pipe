@@ -1,0 +1,8 @@
+node {
+    stage('scm') {
+    git 'https://github.com/yatin527/pipe.git'
+}
+    stage('package') {
+    sh label: '', script: 'mvn clean package'
+}
+}
